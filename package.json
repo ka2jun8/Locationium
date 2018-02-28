@@ -1,0 +1,33 @@
+{
+  "name": "locationium",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "open index.html",
+    "build": "webpack",
+    "build:watch": "webpack --watch"
+  },
+  "dependencies": {
+    "es6-promise": "^4.1.1",
+    "bootstrap": "4.0.0-beta.2",
+    "bootstrap-vue": "^1.4.0",
+    "moment": "^2.20.1",
+    "personium-client": "git+https://github.com/ka2jun8/personium-client.git#feature/0.1.0",
+    "vue": "^2.5.13",
+    "vue-awesome": "^2.3.4",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^9.3.0",
+    "css-loader": "^0.28.8",
+    "style-loader": "^0.19.1",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.2",
+    "vue-loader": "^13.7.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "2.5.0"
+  }
+}
