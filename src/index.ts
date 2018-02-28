@@ -17,7 +17,6 @@ const app = new Vue({
         </div>
     `,
     data: {
-        name: "World",
     },
     components: {
         "location-list": LocationList,

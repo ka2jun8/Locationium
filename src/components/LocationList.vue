@@ -1,7 +1,15 @@
 <template>
     <div class="main">
-        <h2>Location List</h2>
+        <h3>Location List</h3>
         <div style="display:flex; flex-direction:column;">
+            <div style="width: 200px; margin: 5px;" >
+                <div>
+                    * Unit: {{cell.unit}}
+                </div>
+                <div>
+                    * Cell: {{cell.name}}
+                </div>
+            </div>
             <alert-view :alert="alert"/>
             <div style="width: 200px; margin: 5px;" >
                 <div style="margin: 5px;" v-for="place in places" v-bind:key="place">
@@ -21,7 +29,7 @@ import {Promise} from "es6-promise";
 import * as moment from "moment";
 import Alert from "./SuccessAlert.vue";
 import PlaceButton from "./LocationButton.vue";
-import { postPresenceToPersonium, getPlace } from "../personium-client-wrapper";
+import { postPresenceToPersonium, getPlace, getCellInfo } from "../personium-client-wrapper";
 
 const onWebBluetoothStart = require("../web-ble").onWebBluetoothStart;
 
@@ -31,10 +39,12 @@ export default Vue.extend({
     data() {
         return {
             alert: {success: 0, error: 0},
+            cell: {},
             places: [],
         }
     },
     created () {
+        this.cell = getCellInfo();
         this.places = getPlace();
     },
     methods: {

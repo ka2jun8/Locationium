@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div>
         <b-alert 
                 :show="alert.success"
                 dismissible

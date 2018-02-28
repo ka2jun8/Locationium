@@ -57,3 +57,9 @@ export function getPlace(minor?: string) {
     }
 }
 
+export function getCellInfo() {
+    return {
+        unit: setting.unit,
+        name: setting.cell,
+    }
+}
